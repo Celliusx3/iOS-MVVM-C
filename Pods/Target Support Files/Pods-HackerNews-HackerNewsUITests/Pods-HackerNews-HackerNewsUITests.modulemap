@@ -1,0 +1,6 @@
+framework module Pods_HackerNews_HackerNewsUITests {
+  umbrella header "Pods-HackerNews-HackerNewsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

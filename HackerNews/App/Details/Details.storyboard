@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Articles-->
+        <scene sceneID="ezb-zh-z9T">
+            <objects>
+                <viewController storyboardIdentifier="ArticlesViewController" id="9dV-mR-ZLn" customClass="ArticlesViewController" customModule="HackerNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z6q-el-7Ij">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="z6v-hd-S1c"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Articles" image="heart.fill" catalog="system" selectedImage="heart.fill" id="wq3-Gr-ErV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUe-lR-BsA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="173"/>
+        </scene>
+        <!--Comments-->
+        <scene sceneID="pFQ-HF-irN">
+            <objects>
+                <viewController storyboardIdentifier="CommentsViewController" id="BJa-iZ-ETN" customClass="CommentsViewController" customModule="HackerNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qMx-sT-VoT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UAG-sN-bHf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Comments" image="bolt.horizontal.circle.fill" catalog="system" selectedImage="bolt.horizontal.circle.fill" id="lZX-8h-wFm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0X-AD-Ptg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="876"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="yQO-ZN-ANw">
+            <objects>
+                <tabBarController storyboardIdentifier="DetailsViewController" id="mX8-KY-EjL" customClass="DetailsViewController" customModule="HackerNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uo5-zw-a05">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BJa-iZ-ETN" kind="relationship" relationship="viewControllers" id="Qg8-jT-tQl"/>
+                        <segue destination="9dV-mR-ZLn" kind="relationship" relationship="viewControllers" id="efh-QA-uvb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yv1-UK-CYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-539" y="421"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bolt.horizontal.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="heart.fill" catalog="system" width="64" height="54"/>
+    </resources>
+</document>
